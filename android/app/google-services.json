@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "946616838098",
+    "project_id": "tutionlms",
+    "storage_bucket": "tutionlms.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946616838098:android:6e3d0a10ad4e909b9d0a0b",
+        "android_client_info": {
+          "package_name": "com.tutionlms.tution_lms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946616838098-5juhabankpt40rnj79u8i181q9cqvhf3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDb0ZSXdhJhQwzNdOvjy4_Ye-KVhkTqcwk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946616838098-5juhabankpt40rnj79u8i181q9cqvhf3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
