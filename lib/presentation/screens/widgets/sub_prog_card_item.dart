@@ -6,7 +6,7 @@ import 'package:sizer/sizer.dart';
 import '../../../core/constants/my_colors.dart';
 import '../../../data/models/subject_model.dart';
 import '../../../logic/cubit/sub_prog_cubit/sub_prog_cubit.dart';
-import 'prograss_bar.dart';
+import 'progress_bar.dart';
 
 class SubProgCardItem extends StatelessWidget {
   final Subject subject;
@@ -27,8 +27,13 @@ class SubProgCardItem extends StatelessWidget {
         BlocBuilder<SubProgCubit, SubProgState>(
           builder: (context, state) {
             if (state is SubProgLoaded) {
-              int precentage =
-                  ((state.fireContentCount / state.contentCount) * 100).toInt();
+              int percentage = 0;
+              if (state.contentCount > 0) {
+                percentage =
+                    ((state.fireContentCount / state.contentCount) * 100)
+                        .toInt();
+              }
+
               return Column(
                 children: [
                   Row(
@@ -43,7 +48,7 @@ class SubProgCardItem extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        "$precentage%",
+                        "$percentage%",
                         style: TextStyle(
                             color: MyColors.textColorDark, fontSize: 16.sp),
                       ),
@@ -52,12 +57,13 @@ class SubProgCardItem extends StatelessWidget {
                   SizedBox(
                     height: 2.h,
                   ),
-                  MyPrograssBar(
-                      width: 75.w,
-                      max: state.contentCount,
-                      progress: state.fireContentCount,
-                      backgroundColor: MyColors.primaryColor.withOpacity(0.5),
-                      progressColor: MyColors.progressColor),
+                  MyProgressBar(
+                    width: 75.w,
+                    max: state.contentCount,
+                    progress: state.fireContentCount,
+                    backgroundColor: MyColors.primaryColor.withOpacity(0.5),
+                    progressColor: MyColors.progressColor,
+                  ),
                 ],
               );
             } else {
@@ -86,7 +92,7 @@ class SubProgCardItem extends StatelessWidget {
                   SizedBox(
                     height: 2.h,
                   ),
-                  MyPrograssBar(
+                  MyProgressBar(
                     width: 75.w,
                     max: 100,
                     progress: 0,

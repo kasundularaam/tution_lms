@@ -5,7 +5,7 @@ import 'package:sizer/sizer.dart';
 import '../../../core/constants/my_colors.dart';
 import '../../../data/models/subject_model.dart';
 import '../../../logic/cubit/h_t_c_Item_cubit/h_t_c_item_cubit.dart';
-import 'prograss_bar.dart';
+import 'progress_bar.dart';
 
 class HomeTopCardItem extends StatelessWidget {
   final Subject subject;
@@ -20,9 +20,13 @@ class HomeTopCardItem extends StatelessWidget {
         .loadSubjectDetails(subjectId: subject.id);
     return BlocBuilder<HTCItemCubit, HTCItemState>(
       builder: (context, state) {
+        int percentage = 0;
         if (state is HTCItemLoaded) {
-          int precentage =
-              ((state.fireContentCount / state.contentCount) * 100).toInt();
+          if (state.contentCount > 0) {
+            percentage =
+                ((state.fireContentCount / state.contentCount) * 100).toInt();
+          }
+
           return Column(
             children: [
               SizedBox(
@@ -40,7 +44,7 @@ class HomeTopCardItem extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "$precentage%",
+                    "$percentage%",
                     style:
                         TextStyle(color: MyColors.darkColor, fontSize: 14.sp),
                   ),
@@ -49,7 +53,7 @@ class HomeTopCardItem extends StatelessWidget {
               SizedBox(
                 height: 1.h,
               ),
-              MyPrograssBar(
+              MyProgressBar(
                   width: 75.w,
                   max: state.contentCount,
                   progress: state.fireContentCount,
@@ -86,7 +90,7 @@ class HomeTopCardItem extends StatelessWidget {
               SizedBox(
                 height: 1.h,
               ),
-              MyPrograssBar(
+              MyProgressBar(
                 width: 75.w,
                 max: 100,
                 progress: 0,

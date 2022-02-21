@@ -1,13 +1,13 @@
 import 'package:flutter/widgets.dart';
 import 'package:sizer/sizer.dart';
 
-class MyPrograssBar extends StatelessWidget {
+class MyProgressBar extends StatelessWidget {
   final double width;
   final int max;
   final int progress;
   final Color backgroundColor;
   final Color progressColor;
-  const MyPrograssBar({
+  const MyProgressBar({
     Key? key,
     required this.width,
     required this.max,
@@ -18,7 +18,11 @@ class MyPrograssBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double countedProgress = (width / max) * progress;
+    double countedProgress = 0;
+    if (max > 0) {
+      countedProgress = (width / max) * progress;
+    }
+
     return ClipRRect(
       borderRadius: BorderRadius.circular(1.h),
       child: Stack(

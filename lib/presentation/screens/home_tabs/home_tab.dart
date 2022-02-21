@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
@@ -40,6 +42,7 @@ class _HomeTabState extends State<HomeTab> {
               ),
             );
           } else if (state is HomeTabLoaded) {
+            int colorIndex = 0;
             return ListView(
               physics: const BouncingScrollPhysics(),
               padding: EdgeInsets.symmetric(horizontal: 5.w),
@@ -57,7 +60,11 @@ class _HomeTabState extends State<HomeTab> {
                     itemCount: state.subjectList.length,
                     itemBuilder: (context, index) {
                       Subject subject = state.subjectList[index];
-                      Color color = MyColors.subjectColors[index];
+                      Color color = MyColors.subjectColors[colorIndex];
+                      colorIndex++;
+                      if (colorIndex >= MyColors.subjectColors.length) {
+                        colorIndex = 0;
+                      }
                       return BlocProvider(
                         create: (context) => SubjectCardCubit(),
                         child: SubjectCard(

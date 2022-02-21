@@ -9,7 +9,7 @@ import '../../../logic/cubit/subject_card_cubit/subject_card_cubit.dart';
 import '../../router/app_router.dart';
 import 'blur_bg.dart';
 import 'loading_container.dart';
-import 'prograss_bar.dart';
+import 'progress_bar.dart';
 
 class SubjectCard extends StatelessWidget {
   final Subject subject;
@@ -83,7 +83,7 @@ class SubjectCard extends StatelessWidget {
                                   SizedBox(
                                     height: 0.5.h,
                                   ),
-                                  MyPrograssBar(
+                                  MyProgressBar(
                                     width: 35.w,
                                     max: state.moduleCount,
                                     progress: state.completedModules,
@@ -118,7 +118,7 @@ class SubjectCard extends StatelessWidget {
                                   SizedBox(
                                     height: 0.5.h,
                                   ),
-                                  MyPrograssBar(
+                                  MyProgressBar(
                                     width: 35.w,
                                     max: state.contentCount,
                                     progress: state.completedContents,

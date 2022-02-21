@@ -6,7 +6,6 @@ import '../../../core/constants/my_colors.dart';
 import '../../../data/models/subject_model.dart';
 import '../../../logic/cubit/sub_prog_card_cubit/sub_prog_card_cubit.dart';
 import '../../../logic/cubit/sub_prog_cubit/sub_prog_cubit.dart';
-import 'blur_bg.dart';
 import 'sub_prog_card_item.dart';
 
 class SubProgCard extends StatelessWidget {
