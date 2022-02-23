@@ -40,17 +40,23 @@ class SubProgCardItem extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Flexible(
-                        child: Text(
-                          subject.name,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                              color: MyColors.darkElv1, fontSize: 16.sp),
+                        child: FittedBox(
+                          fit: BoxFit.scaleDown,
+                          child: Text(
+                            "${subject.userName} (${subject.name})",
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                                color: MyColors.darkElv0, fontSize: 14.sp),
+                          ),
                         ),
+                      ),
+                      SizedBox(
+                        width: 3.w,
                       ),
                       Text(
                         "$percentage%",
                         style: TextStyle(
-                            color: MyColors.darkElv1, fontSize: 16.sp),
+                            color: MyColors.darkElv0, fontSize: 14.sp),
                       ),
                     ],
                   ),
@@ -73,18 +79,23 @@ class SubProgCardItem extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Flexible(
-                        child: Text(
-                          subject.name,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                              color: MyColors.darkElv0, fontSize: 16.sp),
+                        child: FittedBox(
+                          child: Text(
+                            "${subject.userName} (${subject.name})",
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                                color: MyColors.darkElv0, fontSize: 14.sp),
+                          ),
                         ),
+                      ),
+                      SizedBox(
+                        width: 3.w,
                       ),
                       Text(
                         "...",
                         style: TextStyle(
                             color: MyColors.darkElv1,
-                            fontSize: 16.sp,
+                            fontSize: 14.sp,
                             fontWeight: FontWeight.bold),
                       ),
                     ],

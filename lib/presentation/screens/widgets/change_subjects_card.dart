@@ -72,27 +72,27 @@ class _ChangeSubjectsCardState extends State<ChangeSubjectsCard> {
   List<Widget> buildSubjectList() {
     List<Widget> subList = [];
     widget.fireSubjects.forEach((sub) {
-      subList.add(buildSubject(subjectName: sub.name));
+      subList.add(buildSubject(subject: sub));
     });
     return subList;
   }
 
-  Widget buildSubject({required String subjectName}) {
+  Widget buildSubject({required Subject subject}) {
     return Column(
       children: [
         Container(
           width: 100.w,
           padding: EdgeInsets.all(2.w),
           decoration: BoxDecoration(
-            color: MyColors.primaryColor.withOpacity(0.1),
-            borderRadius: BorderRadius.circular(1.w),
+            color: MyColors.primaryDarkColor,
+            borderRadius: BorderRadius.circular(2.w),
           ),
           child: Text(
-            subjectName,
+            "${subject.userName} (${subject.name})",
             style: TextStyle(
-              fontSize: 14.sp,
-              color: MyColors.darkElv1,
-            ),
+                fontSize: 14.sp,
+                color: MyColors.lightElv3,
+                overflow: TextOverflow.ellipsis),
           ),
         ),
         SizedBox(

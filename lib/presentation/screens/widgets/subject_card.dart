@@ -7,7 +7,6 @@ import '../../../core/screen_arguments/subject_screen_args.dart';
 import '../../../data/models/subject_model.dart';
 import '../../../logic/cubit/subject_card_cubit/subject_card_cubit.dart';
 import '../../router/app_router.dart';
-import 'blur_bg.dart';
 import 'loading_container.dart';
 import 'progress_bar.dart';
 
@@ -46,10 +45,10 @@ class SubjectCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  subject.name,
+                  "${subject.userName} (${subject.name})",
                   style: TextStyle(
                       color: MyColors.darkElv0,
-                      fontSize: 18.sp,
+                      fontSize: 16.sp,
                       fontWeight: FontWeight.w600),
                 ),
                 SizedBox(

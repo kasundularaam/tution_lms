@@ -14,7 +14,7 @@ class HttpRequests {
     final parsed = json.decode(responseBody).cast<Map<String, dynamic>>();
     return parsed
         .map<Subject>(
-          (json) => Subject.fromJson(json),
+          (json) => Subject.fromMap(json),
         )
         .toList();
   }

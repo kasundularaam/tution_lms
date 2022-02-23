@@ -15,10 +15,7 @@ class FirebaseSubjectRepo {
           .doc(FirebaseAuthRepo.currentUid())
           .collection("subjects");
       subjectList.forEach((subject) async {
-        await subjects.doc(subject.id).set({
-          "id": subject.id,
-          "name": subject.name,
-        });
+        await subjects.doc(subject.id).set(subject.toMap());
       });
     } catch (e) {
       throw e;

@@ -26,7 +26,6 @@ class HomeTopCardItem extends StatelessWidget {
             percentage =
                 ((state.fireContentCount / state.contentCount) * 100).toInt();
           }
-
           return Column(
             children: [
               SizedBox(
@@ -36,16 +35,24 @@ class HomeTopCardItem extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Flexible(
-                    child: Text(
-                      subject.name,
-                      overflow: TextOverflow.ellipsis,
-                      style:
-                          TextStyle(color: MyColors.darkElv1, fontSize: 14.sp),
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        "${subject.userName} (${subject.name})",
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          color: MyColors.darkElv0,
+                          fontSize: 14.sp,
+                        ),
+                      ),
                     ),
+                  ),
+                  SizedBox(
+                    width: 3.w,
                   ),
                   Text(
                     "$percentage%",
-                    style: TextStyle(color: MyColors.darkElv1, fontSize: 14.sp),
+                    style: TextStyle(color: MyColors.darkElv0, fontSize: 14.sp),
                   ),
                 ],
               ),
@@ -71,19 +78,25 @@ class HomeTopCardItem extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Flexible(
-                    child: Text(
-                      subject.name,
-                      overflow: TextOverflow.ellipsis,
-                      style:
-                          TextStyle(color: MyColors.darkElv0, fontSize: 14.sp),
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        "${subject.userName} (${subject.name})",
+                        style: TextStyle(
+                            color: MyColors.darkElv0, fontSize: 14.sp),
+                      ),
                     ),
+                  ),
+                  SizedBox(
+                    width: 3.w,
                   ),
                   Text(
                     "...",
                     style: TextStyle(
-                        color: MyColors.darkElv1,
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.bold),
+                      color: MyColors.darkElv1,
+                      fontSize: 14.sp,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ],
               ),

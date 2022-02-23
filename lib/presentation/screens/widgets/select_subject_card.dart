@@ -45,19 +45,19 @@ class _SelectSubjectCardState extends State<SelectSubjectCard> {
             }
           },
           child: Container(
-            padding: EdgeInsets.symmetric(vertical: 2.h),
+            padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 5.w),
             decoration: BoxDecoration(
-              color: selected
-                  ? MyColors.primaryColor
-                  : MyColors.primaryColor.withOpacity(0.1),
+              color: selected ? MyColors.primaryDarkColor : MyColors.lightElv3,
               borderRadius: BorderRadius.circular(2.w),
             ),
             child: Center(
-              child: Text(
-                widget.subject.name,
-                style: TextStyle(
-                  color: selected ? MyColors.lightElv3 : MyColors.darkElv1,
-                  fontSize: 16.sp,
+              child: FittedBox(
+                child: Text(
+                  "${widget.subject.userName} (${widget.subject.name})",
+                  style: TextStyle(
+                    color: selected ? MyColors.lightElv3 : MyColors.darkElv1,
+                    fontSize: 16.sp,
+                  ),
                 ),
               ),
             ),

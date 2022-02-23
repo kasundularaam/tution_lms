@@ -102,7 +102,7 @@ class _LoginPageState extends State<LoginPage> {
                     email: _email,
                     password: _password,
                   ),
-                  bgColor: MyColors.primaryColor,
+                  bgColor: MyColors.primaryDarkColor,
                   txtColor: MyColors.lightElv3,
                 ),
               );

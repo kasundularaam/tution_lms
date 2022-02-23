@@ -19,11 +19,13 @@ class QsItem extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          subject.name,
-          style: TextStyle(
-            color: MyColors.darkElv1,
-            fontSize: 16.sp,
+        FittedBox(
+          child: Text(
+            "${subject.userName} (${subject.name})",
+            style: TextStyle(
+              color: MyColors.darkElv0,
+              fontSize: 14.sp,
+            ),
           ),
         ),
         SizedBox(
