@@ -50,7 +50,7 @@ class _ChangePasswordCardState extends State<ChangePasswordCard> {
           Text(
             "Change Password",
             style: TextStyle(
-              color: MyColors.textColorDark,
+              color: MyColors.darkElv0,
               fontSize: 16.sp,
             ),
           ),
@@ -64,7 +64,7 @@ class _ChangePasswordCardState extends State<ChangePasswordCard> {
             controller: crntPswrdCntrlr,
             style: TextStyle(
               fontSize: 14.sp,
-              color: MyColors.textColorDark,
+              color: MyColors.darkElv1,
             ),
             decoration: const InputDecoration(hintText: "Current Password"),
           ),
@@ -77,7 +77,7 @@ class _ChangePasswordCardState extends State<ChangePasswordCard> {
             controller: newPswrdCntrlr,
             style: TextStyle(
               fontSize: 14.sp,
-              color: MyColors.textColorDark,
+              color: MyColors.darkElv1,
             ),
             decoration: const InputDecoration(hintText: "New Password"),
           ),
@@ -103,7 +103,7 @@ class _ChangePasswordCardState extends State<ChangePasswordCard> {
                     "Loading...",
                     style: TextStyle(
                       fontSize: 14.sp,
-                      color: MyColors.primaryColor,
+                      color: MyColors.darkElv1,
                     ),
                   ),
                 );
@@ -119,7 +119,7 @@ class _ChangePasswordCardState extends State<ChangePasswordCard> {
                       "CHANGE",
                       style: TextStyle(
                         fontSize: 14.sp,
-                        color: MyColors.primaryColor,
+                        color: MyColors.primaryDarkColor,
                       ),
                     ),
                   ),

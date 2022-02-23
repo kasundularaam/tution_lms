@@ -35,7 +35,7 @@ class _ChangeSubjectsCardState extends State<ChangeSubjectsCard> {
           Text(
             "Subjects",
             style: TextStyle(
-              color: MyColors.textColorDark,
+              color: MyColors.darkElv0,
               fontSize: 16.sp,
             ),
           ),
@@ -59,7 +59,7 @@ class _ChangeSubjectsCardState extends State<ChangeSubjectsCard> {
                   "CHANGE",
                   style: TextStyle(
                     fontSize: 14.sp,
-                    color: MyColors.primaryColor,
+                    color: MyColors.primaryDarkColor,
                   ),
                 ),
               ),
@@ -92,7 +92,7 @@ class _ChangeSubjectsCardState extends State<ChangeSubjectsCard> {
             subjectName,
             style: TextStyle(
               fontSize: 14.sp,
-              color: MyColors.darkColor,
+              color: MyColors.darkElv1,
             ),
           ),
         ),

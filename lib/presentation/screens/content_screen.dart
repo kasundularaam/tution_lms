@@ -26,7 +26,7 @@ class _ContentScreenState extends State<ContentScreen> {
   @override
   Widget build(BuildContext context) {
     return InnerScrnTmpl(
-      title: "",
+      title: widget.args.contentName,
       content: ListView(
         padding: EdgeInsets.symmetric(horizontal: 5.w),
         physics: const BouncingScrollPhysics(),
@@ -34,39 +34,47 @@ class _ContentScreenState extends State<ContentScreen> {
           SizedBox(
             height: 2.h,
           ),
-          Center(
-            child: Text(
-              widget.args.contentName,
-              style: TextStyle(
-                color: MyColors.primaryColor,
-                fontSize: 22.sp,
-                fontWeight: FontWeight.w600,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          SizedBox(
-            height: 2.h,
-          ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                "Subject: ${widget.args.subjectName}",
-                style: TextStyle(
-                  color: MyColors.textColorDark,
-                  fontSize: 16.sp,
-                ),
+              RichText(
+                text: TextSpan(
+                    text: "Subject: ",
+                    style: TextStyle(
+                        color: MyColors.darkElv0,
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w600),
+                    children: [
+                      TextSpan(
+                        text: widget.args.subjectName,
+                        style: TextStyle(
+                          color: MyColors.primaryDarkColor,
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      )
+                    ]),
               ),
               SizedBox(
                 height: 2.h,
               ),
-              Text(
-                "Module: ${widget.args.moduleName}",
-                style: TextStyle(
-                  color: MyColors.textColorDark,
-                  fontSize: 16.sp,
-                ),
+              RichText(
+                text: TextSpan(
+                    text: "Module: ",
+                    style: TextStyle(
+                        color: MyColors.darkElv0,
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w600),
+                    children: [
+                      TextSpan(
+                        text: widget.args.moduleName,
+                        style: TextStyle(
+                          color: MyColors.primaryDarkColor,
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      )
+                    ]),
               ),
             ],
           ),
@@ -74,7 +82,7 @@ class _ContentScreenState extends State<ContentScreen> {
             height: 2.h,
           ),
           Divider(
-            color: MyColors.textColorDark,
+            color: MyColors.darkElv1,
             thickness: 0.2.w,
           ),
           SizedBox(
@@ -86,7 +94,7 @@ class _ContentScreenState extends State<ContentScreen> {
               Text(
                 "Download content",
                 style: TextStyle(
-                  color: MyColors.textColorDark,
+                  color: MyColors.darkElv1,
                   fontSize: 14.sp,
                 ),
               ),
@@ -101,7 +109,7 @@ class _ContentScreenState extends State<ContentScreen> {
                   if (state is DownloadPdfLoading) {
                     return const Center(
                         child: CircularProgressIndicator(
-                      color: MyColors.progressColor,
+                      color: MyColors.primaryColor,
                     ));
                   } else {
                     return SmallBtn(
@@ -111,7 +119,7 @@ class _ContentScreenState extends State<ContentScreen> {
                               .downloadPdf(
                                   moduleId: widget.args.moduleId,
                                   contentId: widget.args.contentId),
-                      bgColor: MyColors.secondaryColor,
+                      bgColor: MyColors.primaryDarkColor,
                       txtColor: MyColors.lightColor,
                     );
                   }
@@ -123,7 +131,7 @@ class _ContentScreenState extends State<ContentScreen> {
             height: 3.h,
           ),
           Divider(
-            color: MyColors.textColorDark,
+            color: MyColors.darkElv1,
             thickness: 0.2.w,
           ),
           SizedBox(
@@ -135,7 +143,7 @@ class _ContentScreenState extends State<ContentScreen> {
               Text(
                 "Add schedule to work later",
                 style: TextStyle(
-                  color: MyColors.textColorDark,
+                  color: MyColors.darkElv1,
                   fontSize: 14.sp,
                 ),
               ),
@@ -152,7 +160,7 @@ class _ContentScreenState extends State<ContentScreen> {
                             contentId: widget.args.contentId,
                             contentName: widget.args.contentName),
                       ),
-                  bgColor: MyColors.secondaryColor,
+                  bgColor: MyColors.primaryDarkColor,
                   txtColor: MyColors.lightColor),
             ],
           ),
@@ -160,7 +168,7 @@ class _ContentScreenState extends State<ContentScreen> {
             height: 3.h,
           ),
           Divider(
-            color: MyColors.textColorDark,
+            color: MyColors.darkElv1,
             thickness: 0.2.w,
           ),
           SizedBox(
@@ -169,7 +177,7 @@ class _ContentScreenState extends State<ContentScreen> {
           Text(
             "Start working right now",
             style: TextStyle(
-              color: MyColors.textColorDark,
+              color: MyColors.darkElv1,
               fontSize: 14.sp,
             ),
           ),
@@ -183,8 +191,8 @@ class _ContentScreenState extends State<ContentScreen> {
                     AppRouter.workingScreen,
                     arguments: widget.args,
                   ),
-              bgColor: MyColors.progressColor,
-              txtColor: MyColors.darkColor),
+              bgColor: MyColors.primaryColor,
+              txtColor: MyColors.primaryDarkColor),
         ],
       ),
     );

@@ -72,13 +72,13 @@ class _InitTabState extends State<InitTab> {
                   return Container(
                     padding: EdgeInsets.all(5.w),
                     decoration: BoxDecoration(
-                      color: MyColors.progressColor,
+                      color: MyColors.primaryColor,
                       borderRadius: BorderRadius.circular(5.w),
                     ),
                     child: Text(
                       state.startedCounter,
                       style: TextStyle(
-                          color: MyColors.darkColor,
+                          color: MyColors.primaryDarkColor,
                           fontSize: 50.sp,
                           fontWeight: FontWeight.w600),
                     ),
@@ -87,13 +87,13 @@ class _InitTabState extends State<InitTab> {
                   return Container(
                     padding: EdgeInsets.all(5.w),
                     decoration: BoxDecoration(
-                      color: MyColors.progressColor,
+                      color: MyColors.primaryColor,
                       borderRadius: BorderRadius.circular(5.w),
                     ),
                     child: Text(
                       state.timeCounter,
                       style: TextStyle(
-                          color: MyColors.darkColor,
+                          color: MyColors.primaryDarkColor,
                           fontSize: 50.sp,
                           fontWeight: FontWeight.w600),
                     ),
@@ -102,28 +102,29 @@ class _InitTabState extends State<InitTab> {
                   return Container(
                     padding: EdgeInsets.all(5.w),
                     decoration: BoxDecoration(
-                      color: MyColors.primaryColor,
+                      color: MyColors.lightElv3,
                       borderRadius: BorderRadius.circular(5.w),
                     ),
                     child: Text(
                       state.args.clockValue,
                       style: TextStyle(
-                          color: MyColors.lightColor,
-                          fontSize: 50.sp,
-                          fontWeight: FontWeight.w600),
+                        color: MyColors.darkElv0,
+                        fontSize: 50.sp,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   );
                 } else {
                   return Container(
                     padding: EdgeInsets.all(5.w),
                     decoration: BoxDecoration(
-                      color: MyColors.lightColor,
+                      color: MyColors.lightElv3,
                       borderRadius: BorderRadius.circular(5.w),
                     ),
                     child: Text(
                       "00:00:00",
                       style: TextStyle(
-                        color: MyColors.darkColor,
+                        color: MyColors.darkElv0,
                         fontSize: 50.sp,
                         fontWeight: FontWeight.w600,
                       ),
@@ -140,7 +141,7 @@ class _InitTabState extends State<InitTab> {
             width: 100.w,
             padding: EdgeInsets.all(5.w),
             decoration: BoxDecoration(
-              color: MyColors.textColorLight,
+              color: MyColors.lightElv3,
               borderRadius: BorderRadius.circular(5.w),
             ),
             child: Column(
@@ -149,7 +150,7 @@ class _InitTabState extends State<InitTab> {
                 Text(
                   "Subject: ${widget.args.subjectName}",
                   style: TextStyle(
-                    color: MyColors.darkColor,
+                    color: MyColors.darkElv1,
                     fontSize: 16.sp,
                   ),
                 ),
@@ -159,7 +160,7 @@ class _InitTabState extends State<InitTab> {
                 Text(
                   "Module: ${widget.args.moduleName}",
                   style: TextStyle(
-                    color: MyColors.darkColor,
+                    color: MyColors.darkElv1,
                     fontSize: 16.sp,
                   ),
                 ),
@@ -169,7 +170,7 @@ class _InitTabState extends State<InitTab> {
                 Text(
                   "Content: ${widget.args.contentName}",
                   style: TextStyle(
-                    color: MyColors.darkColor,
+                    color: MyColors.darkElv1,
                     fontSize: 16.sp,
                   ),
                 ),
@@ -197,15 +198,15 @@ class _InitTabState extends State<InitTab> {
                         .startTimer(
                             notifMsg: widget.args.contentName,
                             args: widget.args),
-                    bgColor: MyColors.lightColor,
-                    txtColor: MyColors.primaryColor);
+                    bgColor: MyColors.primaryDarkColor,
+                    txtColor: MyColors.lightElv3);
               } else {
                 return BigBtn(
                     btnText: "End",
                     onPressed: () => BlocProvider.of<TimerCubit>(context)
                         .endTimer(contentScreenArgs: widget.args),
                     bgColor: MyColors.lightColor,
-                    txtColor: MyColors.stopBtnClr);
+                    txtColor: MyColors.red);
               }
             },
           ),

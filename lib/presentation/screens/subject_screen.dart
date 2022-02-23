@@ -51,8 +51,8 @@ class _SubjectScreenState extends State<SubjectScreen> {
               textInputAction: TextInputAction.search,
               isPassword: false,
               hintText: "Search Modules...",
-              textColor: MyColors.textColorDark,
-              bgColor: MyColors.white.withOpacity(0.7),
+              textColor: MyColors.darkElv1,
+              bgColor: MyColors.lightElv3,
             ),
           ),
           SizedBox(
@@ -72,13 +72,13 @@ class _SubjectScreenState extends State<SubjectScreen> {
               if (state is SubjectScreenLoading) {
                 return const Center(
                     child: CircularProgressIndicator(
-                  color: MyColors.progressColor,
+                  color: MyColors.primaryColor,
                 ));
               } else if (state is SubjectScreenLoaded) {
                 return ListView.builder(
                   padding: const EdgeInsets.all(0),
                   shrinkWrap: true,
-                  physics: BouncingScrollPhysics(),
+                  physics: const BouncingScrollPhysics(),
                   itemCount: state.moduleList.length,
                   itemBuilder: (BuildContext context, int index) {
                     Module module = state.moduleList[index];

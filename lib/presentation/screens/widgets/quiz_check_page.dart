@@ -39,7 +39,7 @@ class QuizCheckPage extends StatelessWidget {
           if (state is QuizCheckLoading) {
             return const Center(
               child: CircularProgressIndicator(
-                color: MyColors.secondaryColor,
+                color: MyColors.primaryColor,
               ),
             );
           } else if (state is QuizCheckSucceed) {
@@ -66,7 +66,7 @@ class QuizCheckPage extends StatelessWidget {
                             Text(
                               state.grade,
                               style: TextStyle(
-                                  color: MyColors.lightColor,
+                                  color: MyColors.lightElv3,
                                   fontSize: 18.sp,
                                   fontWeight: FontWeight.w600),
                             ),
@@ -82,7 +82,7 @@ class QuizCheckPage extends StatelessWidget {
                                     Text(
                                       "Quiz Attempted: ${state.attempted}",
                                       style: TextStyle(
-                                        color: MyColors.lightColor,
+                                        color: MyColors.lightElv3,
                                         fontSize: 12.sp,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -93,7 +93,7 @@ class QuizCheckPage extends StatelessWidget {
                                     Text(
                                       "Correct: ${state.correct}",
                                       style: TextStyle(
-                                        color: MyColors.lightColor,
+                                        color: MyColors.lightElv3,
                                         fontSize: 12.sp,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -105,12 +105,12 @@ class QuizCheckPage extends StatelessWidget {
                                   decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                       border: Border.all(
-                                          color: MyColors.lightColor,
+                                          color: MyColors.lightElv3,
                                           width: 1.w)),
                                   child: Text(
                                     "${state.precentage}%",
                                     style: TextStyle(
-                                      color: MyColors.lightColor,
+                                      color: MyColors.lightElv3,
                                       fontSize: 18.sp,
                                       fontWeight: FontWeight.w900,
                                     ),
@@ -141,14 +141,14 @@ class QuizCheckPage extends StatelessWidget {
                   onTap: () => BlocProvider.of<QuizNavCubit>(context)
                       .emit(QuizNavAttempt()),
                   child: Container(
-                    color: MyColors.lightColor,
+                    color: MyColors.lightElv3,
                     width: 100.w,
                     padding: EdgeInsets.symmetric(vertical: 2.h),
                     child: Center(
                       child: Text(
                         "Quiz",
                         style: TextStyle(
-                            color: MyColors.primaryColor,
+                            color: MyColors.primaryDarkColor,
                             fontSize: 18.sp,
                             fontWeight: FontWeight.w600),
                       ),

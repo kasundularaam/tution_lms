@@ -50,7 +50,7 @@ class _EndTabState extends State<EndTab> {
             width: 100.w,
             padding: EdgeInsets.all(5.w),
             decoration: BoxDecoration(
-              color: MyColors.white,
+              color: MyColors.lightElv3,
               borderRadius: BorderRadius.circular(5.w),
             ),
             child: Column(
@@ -59,7 +59,7 @@ class _EndTabState extends State<EndTab> {
                 Text(
                   "Subject: ${widget.args.contentScreenArgs.subjectName}",
                   style: TextStyle(
-                    color: MyColors.darkColor,
+                    color: MyColors.darkElv1,
                     fontSize: 16.sp,
                   ),
                 ),
@@ -69,7 +69,7 @@ class _EndTabState extends State<EndTab> {
                 Text(
                   "Module: ${widget.args.contentScreenArgs.moduleName}",
                   style: TextStyle(
-                    color: MyColors.darkColor,
+                    color: MyColors.darkElv1,
                     fontSize: 16.sp,
                   ),
                 ),
@@ -79,7 +79,7 @@ class _EndTabState extends State<EndTab> {
                 Text(
                   "Content: ${widget.args.contentScreenArgs.contentName}",
                   style: TextStyle(
-                    color: MyColors.darkColor,
+                    color: MyColors.darkElv1,
                     fontSize: 16.sp,
                   ),
                 ),
@@ -89,7 +89,7 @@ class _EndTabState extends State<EndTab> {
                 Text(
                   "Start Time: $startTime",
                   style: TextStyle(
-                    color: MyColors.darkColor,
+                    color: MyColors.darkElv1,
                     fontSize: 16.sp,
                   ),
                 ),
@@ -99,7 +99,7 @@ class _EndTabState extends State<EndTab> {
                 Text(
                   "End Time: $endTime",
                   style: TextStyle(
-                    color: MyColors.darkColor,
+                    color: MyColors.darkElv1,
                     fontSize: 16.sp,
                   ),
                 ),
@@ -109,7 +109,7 @@ class _EndTabState extends State<EndTab> {
                 Text(
                   "Worked Time: ${widget.args.clockValue}",
                   style: TextStyle(
-                    color: MyColors.darkColor,
+                    color: MyColors.darkElv1,
                     fontSize: 16.sp,
                   ),
                 ),
@@ -133,16 +133,16 @@ class _EndTabState extends State<EndTab> {
             },
             builder: (context, state) {
               if (state is AddWorkDetailsLoading) {
-                return Center(
+                return const Center(
                     child: CircularProgressIndicator(
-                  color: MyColors.progressColor,
+                  color: MyColors.primaryColor,
                 ));
               } else if (state is AddWorkDetailsSucceed) {
                 return Container(
                   margin: EdgeInsets.symmetric(horizontal: 5.w),
                   padding: EdgeInsets.all(5.w),
                   decoration: BoxDecoration(
-                    color: MyColors.lightColor,
+                    color: MyColors.lightElv3,
                     borderRadius: BorderRadius.circular(5.w),
                   ),
                   child: Column(
@@ -150,9 +150,9 @@ class _EndTabState extends State<EndTab> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.check_rounded,
-                            color: MyColors.successClr,
+                            color: MyColors.green,
                           ),
                           SizedBox(
                             width: 2.w,
@@ -160,14 +160,14 @@ class _EndTabState extends State<EndTab> {
                           Text(
                             "You Done",
                             style: TextStyle(
-                              color: MyColors.successClr,
+                              color: MyColors.green,
                               fontSize: 16.sp,
                             ),
                           ),
                         ],
                       ),
                       state.isCompleted
-                          ? SizedBox()
+                          ? const SizedBox()
                           : Column(
                               children: [
                                 SizedBox(
@@ -185,7 +185,7 @@ class _EndTabState extends State<EndTab> {
                                       Icon(
                                         Icons.home_outlined,
                                         size: 22.sp,
-                                        color: MyColors.primaryColor,
+                                        color: MyColors.primaryDarkColor,
                                       ),
                                       SizedBox(
                                         width: 2.w,
@@ -193,7 +193,7 @@ class _EndTabState extends State<EndTab> {
                                       Text(
                                         "Back To Home",
                                         style: TextStyle(
-                                            color: MyColors.primaryColor,
+                                            color: MyColors.primaryDarkColor,
                                             fontSize: 16.sp,
                                             fontWeight: FontWeight.w600),
                                       ),
@@ -210,7 +210,7 @@ class _EndTabState extends State<EndTab> {
                   margin: EdgeInsets.symmetric(horizontal: 5.w),
                   padding: EdgeInsets.all(5.w),
                   decoration: BoxDecoration(
-                    color: MyColors.lightColor,
+                    color: MyColors.lightElv3,
                     borderRadius: BorderRadius.circular(5.w),
                   ),
                   child: Column(
@@ -218,7 +218,7 @@ class _EndTabState extends State<EndTab> {
                       Text(
                         "Did you complete this content?",
                         style: TextStyle(
-                          color: MyColors.darkColor,
+                          color: MyColors.darkElv1,
                           fontSize: 16.sp,
                         ),
                       ),
@@ -236,8 +236,8 @@ class _EndTabState extends State<EndTab> {
                               isCompleted: false,
                               endTabArgs: widget.args,
                             ),
-                            bgColor: MyColors.lightColor,
-                            txtColor: MyColors.primaryColor,
+                            bgColor: MyColors.lightElv3,
+                            txtColor: MyColors.primaryDarkColor,
                           ),
                           SmallBtn(
                             btnText: "Yes I Did",
@@ -246,8 +246,8 @@ class _EndTabState extends State<EndTab> {
                                     .addWorkDetails(
                                         isCompleted: true,
                                         endTabArgs: widget.args),
-                            bgColor: MyColors.secondaryColor,
-                            txtColor: MyColors.lightColor,
+                            bgColor: MyColors.primaryDarkColor,
+                            txtColor: MyColors.lightElv3,
                           ),
                         ],
                       )

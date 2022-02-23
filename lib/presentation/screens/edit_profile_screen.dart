@@ -39,7 +39,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
           } else if (state is SettingLoading) {
             return const Center(
                 child: CircularProgressIndicator(
-              color: MyColors.secondaryColor,
+              color: MyColors.primaryColor,
             ));
           } else if (state is SettingLoaded) {
             return ListView(

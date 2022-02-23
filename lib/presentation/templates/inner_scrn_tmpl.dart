@@ -24,72 +24,72 @@ class InnerScrnTmpl extends StatefulWidget {
 class _InnerScrnTmplState extends State<InnerScrnTmpl> {
   @override
   Widget build(BuildContext context) {
+    double actionWidgetSize = 20.sp + 5.w + 5.w;
     return Scaffold(
-      backgroundColor: MyColors.lightElv3,
+      backgroundColor: MyColors.primaryColor,
       body: SafeArea(
         child: LayoutBuilder(
             builder: (BuildContext context, BoxConstraints constraints) {
-          return Container(
+          return SizedBox(
             width: constraints.maxWidth,
             height: constraints.maxHeight,
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
-                Container(
-                  child: Stack(
-                    children: [
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: InkWell(
-                          onTap: () => Navigator.pop(context),
-                          child: Padding(
-                            padding: EdgeInsets.all(5.w),
-                            child: Icon(
-                              Icons.arrow_back_ios,
-                              color: MyColors.primaryColor,
-                              size: 20.sp,
-                            ),
-                          ),
+                Row(
+                  children: [
+                    InkWell(
+                      onTap: () => Navigator.pop(context),
+                      child: Padding(
+                        padding: EdgeInsets.all(5.w),
+                        child: Icon(
+                          Icons.arrow_back_ios,
+                          color: MyColors.lightElv3,
+                          size: 20.sp,
                         ),
                       ),
-                      Align(
-                        alignment: Alignment.center,
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: 2.h,
-                            ),
-                            Text(
+                    ),
+                    Expanded(
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 2.h,
+                          ),
+                          FittedBox(
+                            child: Text(
                               widget.title,
                               style: MyStyles.screenTitles,
                             ),
-                            widget.subtitle != null
-                                ? Column(
-                                    children: [
-                                      SizedBox(
-                                        height: 2.h,
-                                      ),
-                                      Text(
+                          ),
+                          widget.subtitle != null
+                              ? Column(
+                                  children: [
+                                    SizedBox(
+                                      height: 2.h,
+                                    ),
+                                    FittedBox(
+                                      child: Text(
                                         widget.subtitle!,
                                         style: MyStyles.screenSubtitles,
                                       ),
-                                      SizedBox(
-                                        height: 2.h,
-                                      ),
-                                    ],
-                                  )
-                                : SizedBox(
-                                    height: 2.h,
-                                  ),
-                          ],
+                                    ),
+                                    SizedBox(
+                                      height: 2.h,
+                                    ),
+                                  ],
+                                )
+                              : SizedBox(
+                                  height: 2.h,
+                                ),
+                        ],
+                      ),
+                    ),
+                    widget.action ??
+                        SizedBox(
+                          width: actionWidgetSize,
+                          height: actionWidgetSize,
                         ),
-                      ),
-                      Align(
-                        alignment: Alignment.centerRight,
-                        child: widget.action,
-                      ),
-                    ],
-                  ),
+                  ],
                 ),
                 Expanded(
                   child: ClipRRect(

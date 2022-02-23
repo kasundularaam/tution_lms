@@ -37,7 +37,7 @@ class _WorkingOnAnotherTabState extends State<WorkingOnAnotherTab> {
             "You are currently working on \n${widget.contentName}\nplease pay your attention to the work",
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: MyColors.wAnsFgClr,
+              color: MyColors.red,
               fontSize: 14.sp,
               fontWeight: FontWeight.w600,
             ),

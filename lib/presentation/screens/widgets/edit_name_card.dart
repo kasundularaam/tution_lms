@@ -51,7 +51,7 @@ class _EditNameCardState extends State<EditNameCard> {
           Text(
             "Name",
             style: TextStyle(
-              color: MyColors.textColorDark,
+              color: MyColors.darkElv0,
               fontSize: 16.sp,
             ),
           ),
@@ -63,7 +63,7 @@ class _EditNameCardState extends State<EditNameCard> {
             controller: controller,
             style: TextStyle(
               fontSize: 14.sp,
-              color: MyColors.textColorDark,
+              color: MyColors.darkElv1,
             ),
           ),
           SizedBox(
@@ -87,7 +87,7 @@ class _EditNameCardState extends State<EditNameCard> {
                       "Loading...",
                       style: TextStyle(
                         fontSize: 14.sp,
-                        color: MyColors.primaryColor,
+                        color: MyColors.darkElv1,
                       ),
                     ),
                   );
@@ -101,7 +101,7 @@ class _EditNameCardState extends State<EditNameCard> {
                         "SAVE",
                         style: TextStyle(
                           fontSize: 14.sp,
-                          color: MyColors.primaryColor,
+                          color: MyColors.primaryDarkColor,
                         ),
                       ),
                     ),

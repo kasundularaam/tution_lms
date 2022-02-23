@@ -36,7 +36,7 @@ class _NewEventScreenState extends State<NewEventScreen> {
             height: 2.h,
           ),
           Text("Date",
-              style: TextStyle(color: MyColors.darkColor, fontSize: 16.sp)),
+              style: TextStyle(color: MyColors.darkElv0, fontSize: 16.sp)),
           SizedBox(
             height: 2.h,
           ),
@@ -44,15 +44,15 @@ class _NewEventScreenState extends State<NewEventScreen> {
             create: (context) => PickDateCubit(),
             child: MDatePicker(
               onSelectDate: (date) => pickedDate = date,
-              bgColor: MyColors.lightColor,
-              txtColor: MyColors.darkColor,
+              bgColor: MyColors.lightElv3,
+              txtColor: MyColors.darkElv1,
             ),
           ),
           SizedBox(
             height: 2.h,
           ),
           Text("Time",
-              style: TextStyle(color: MyColors.darkColor, fontSize: 16.sp)),
+              style: TextStyle(color: MyColors.darkElv0, fontSize: 16.sp)),
           SizedBox(
             height: 2.h,
           ),
@@ -60,21 +60,21 @@ class _NewEventScreenState extends State<NewEventScreen> {
             create: (context) => PickTimeCubit(),
             child: MTimePicker(
               onPickedTime: (time) => pickedTime = time,
-              bgColor: MyColors.lightColor,
-              txtColor: MyColors.darkColor,
+              bgColor: MyColors.lightElv3,
+              txtColor: MyColors.darkElv1,
             ),
           ),
           SizedBox(
             height: 3.h,
           ),
           Text("Description",
-              style: TextStyle(color: MyColors.darkColor, fontSize: 16.sp)),
+              style: TextStyle(color: MyColors.darkElv0, fontSize: 16.sp)),
           SizedBox(
             height: 2.h,
           ),
           Container(
             decoration: BoxDecoration(
-              color: MyColors.white,
+              color: MyColors.lightElv3,
               borderRadius: BorderRadius.circular(2.w),
             ),
             child: TextField(
@@ -83,7 +83,7 @@ class _NewEventScreenState extends State<NewEventScreen> {
               autofocus: false,
               keyboardType: TextInputType.multiline,
               maxLines: null,
-              style: TextStyle(color: MyColors.textColorDark, fontSize: 14.sp),
+              style: TextStyle(color: MyColors.darkElv1, fontSize: 14.sp),
               decoration: InputDecoration(
                 hintText: "Your Reminder Description...",
                 contentPadding:
@@ -112,7 +112,7 @@ class _NewEventScreenState extends State<NewEventScreen> {
               if (state is NewEventLoading) {
                 return const Center(
                     child: CircularProgressIndicator(
-                  color: MyColors.progressColor,
+                  color: MyColors.primaryColor,
                 ));
               } else {
                 return Center(
@@ -128,8 +128,8 @@ class _NewEventScreenState extends State<NewEventScreen> {
                                 errorMsg: "Please pick date and time!"));
                       }
                     },
-                    bgColor: MyColors.secondaryColor,
-                    txtColor: MyColors.lightColor,
+                    bgColor: MyColors.primaryDarkColor,
+                    txtColor: MyColors.lightElv3,
                   ),
                 );
               }

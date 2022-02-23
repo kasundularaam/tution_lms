@@ -36,7 +36,7 @@ class _CongratulationsTabState extends State<CongratulationsTab> {
             child: Text(
               "CONGRATULATIONS",
               style: TextStyle(
-                  color: MyColors.primaryColor,
+                  color: MyColors.primaryDarkColor,
                   fontSize: 18.sp,
                   fontWeight: FontWeight.bold),
             ),
@@ -47,7 +47,7 @@ class _CongratulationsTabState extends State<CongratulationsTab> {
           Text(
             "You have successfully completed \n${widget.contentName}\nkeep working everyday...\nGOOD LUCK!!",
             style: TextStyle(
-              color: MyColors.darkColor,
+              color: MyColors.darkElv1,
               fontSize: 13.sp,
             ),
             textAlign: TextAlign.center,
@@ -73,7 +73,7 @@ class _CongratulationsTabState extends State<CongratulationsTab> {
                     Icon(
                       Icons.home_outlined,
                       size: 20.sp,
-                      color: MyColors.primaryColor,
+                      color: MyColors.primaryDarkColor,
                     ),
                     SizedBox(
                       width: 2.w,
@@ -81,7 +81,7 @@ class _CongratulationsTabState extends State<CongratulationsTab> {
                     Text(
                       "Back To Home",
                       style: TextStyle(
-                          color: MyColors.primaryColor,
+                          color: MyColors.primaryDarkColor,
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w600),
                     ),

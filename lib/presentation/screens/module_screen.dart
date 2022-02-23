@@ -59,7 +59,7 @@ class _ModuleScreenState extends State<ModuleScreen> {
                       Text(
                         "Contents",
                         style: TextStyle(
-                            color: MyColors.textColorDark,
+                            color: MyColors.darkElv0,
                             fontSize: 20.sp,
                             fontWeight: FontWeight.w600),
                       ),
@@ -84,7 +84,7 @@ class _ModuleScreenState extends State<ModuleScreen> {
                             Text(
                               "See All",
                               style: TextStyle(
-                                color: MyColors.secondaryColor,
+                                color: MyColors.primaryDarkColor,
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w600,
                               ),
@@ -92,9 +92,9 @@ class _ModuleScreenState extends State<ModuleScreen> {
                             SizedBox(
                               width: 2.w,
                             ),
-                            Icon(
+                            const Icon(
                               Icons.arrow_forward_rounded,
-                              color: MyColors.secondaryColor,
+                              color: MyColors.primaryDarkColor,
                             ),
                             SizedBox(
                               width: 5.w,
@@ -109,19 +109,19 @@ class _ModuleScreenState extends State<ModuleScreen> {
               SizedBox(
                 height: 3.h,
               ),
-              Container(
+              SizedBox(
                 height: 16.h,
                 child: BlocBuilder<ModuleScreenCubit, ModuleScreenState>(
                   builder: (context, state) {
                     if (state is ModuleScreenLoading) {
-                      return Center(
+                      return const Center(
                           child: CircularProgressIndicator(
-                        color: MyColors.progressColor,
+                        color: MyColors.primaryColor,
                       ));
                     } else if (state is ModuleScreenLoaded) {
                       return ListView(
-                        padding: EdgeInsets.all(0),
-                        physics: BouncingScrollPhysics(),
+                        padding: const EdgeInsets.all(0),
+                        physics: const BouncingScrollPhysics(),
                         scrollDirection: Axis.horizontal,
                         children: [
                           SizedBox(
@@ -171,7 +171,7 @@ class _ModuleScreenState extends State<ModuleScreen> {
                       Text(
                         "Add schedule to work later",
                         style: TextStyle(
-                          color: MyColors.textColorDark,
+                          color: MyColors.darkElv1,
                           fontSize: 14.sp,
                         ),
                       ),
@@ -191,8 +191,8 @@ class _ModuleScreenState extends State<ModuleScreen> {
                                   moduleName: widget.args.moduleName,
                                 ),
                               ),
-                          bgColor: MyColors.secondaryColor,
-                          txtColor: MyColors.lightColor),
+                          bgColor: MyColors.primaryDarkColor,
+                          txtColor: MyColors.lightElv3),
                       SizedBox(
                         width: 5.w,
                       ),
@@ -206,7 +206,7 @@ class _ModuleScreenState extends State<ModuleScreen> {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 5.w),
                 child: Divider(
-                  color: MyColors.textColorDark,
+                  color: MyColors.darkElv1,
                   thickness: 0.2.w,
                 ),
               ),
@@ -218,7 +218,7 @@ class _ModuleScreenState extends State<ModuleScreen> {
                 child: Text(
                   "Questions",
                   style: TextStyle(
-                      color: MyColors.textColorDark,
+                      color: MyColors.darkElv0,
                       fontSize: 20.sp,
                       fontWeight: FontWeight.w600),
                 ),
@@ -237,7 +237,7 @@ class _ModuleScreenState extends State<ModuleScreen> {
                       Text(
                         "Let's practice yourself",
                         style: TextStyle(
-                          color: MyColors.textColorDark,
+                          color: MyColors.darkElv1,
                           fontSize: 14.sp,
                         ),
                       ),
@@ -255,8 +255,8 @@ class _ModuleScreenState extends State<ModuleScreen> {
                                     moduleName: widget.args.moduleName,
                                     subjectId: widget.args.subjectId),
                               ),
-                          bgColor: MyColors.progressColor,
-                          txtColor: MyColors.darkColor),
+                          bgColor: MyColors.primaryDarkColor,
+                          txtColor: MyColors.lightElv3),
                       SizedBox(
                         width: 5.w,
                       ),

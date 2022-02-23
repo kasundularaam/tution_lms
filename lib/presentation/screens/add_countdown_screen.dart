@@ -47,7 +47,7 @@ class _AddCountdownScreenState extends State<AddCountdownScreen> {
           Text(
             "Exam Title",
             style: TextStyle(
-              color: MyColors.darkColor,
+              color: MyColors.darkElv0,
               fontSize: 16.sp,
             ),
           ),
@@ -61,14 +61,14 @@ class _AddCountdownScreenState extends State<AddCountdownScreen> {
             textInputAction: TextInputAction.done,
             isPassword: false,
             hintText: "Title...",
-            textColor: MyColors.darkColor,
-            bgColor: MyColors.lightColor,
+            textColor: MyColors.darkElv1,
+            bgColor: MyColors.lightElv3,
           ),
           SizedBox(
             height: 2.h,
           ),
           Text("Date",
-              style: TextStyle(color: MyColors.darkColor, fontSize: 16.sp)),
+              style: TextStyle(color: MyColors.darkElv0, fontSize: 16.sp)),
           SizedBox(
             height: 2.h,
           ),
@@ -76,15 +76,15 @@ class _AddCountdownScreenState extends State<AddCountdownScreen> {
             create: (context) => PickDateCubit(),
             child: MDatePicker(
               onSelectDate: (date) => pickedDate = date,
-              bgColor: MyColors.lightColor,
-              txtColor: MyColors.darkColor,
+              bgColor: MyColors.lightElv3,
+              txtColor: MyColors.darkElv1,
             ),
           ),
           SizedBox(
             height: 2.h,
           ),
           Text("Time",
-              style: TextStyle(color: MyColors.darkColor, fontSize: 16.sp)),
+              style: TextStyle(color: MyColors.darkElv0, fontSize: 16.sp)),
           SizedBox(
             height: 2.h,
           ),
@@ -92,8 +92,8 @@ class _AddCountdownScreenState extends State<AddCountdownScreen> {
             create: (context) => PickTimeCubit(),
             child: MTimePicker(
               onPickedTime: (time) => pickedTime = time,
-              bgColor: MyColors.lightColor,
-              txtColor: MyColors.darkColor,
+              bgColor: MyColors.lightElv3,
+              txtColor: MyColors.darkElv1,
             ),
           ),
           SizedBox(
@@ -103,9 +103,9 @@ class _AddCountdownScreenState extends State<AddCountdownScreen> {
             child: BlocConsumer<SetCountdownCubit, SetCountdownState>(
                 builder: (context, state) {
               if (state is SetCountdownLoading) {
-                return Center(
+                return const Center(
                   child: CircularProgressIndicator(
-                    color: MyColors.progressColor,
+                    color: MyColors.primaryColor,
                   ),
                 );
               } else {
@@ -120,8 +120,8 @@ class _AddCountdownScreenState extends State<AddCountdownScreen> {
                     exmTime: pickedTime!,
                     exmDate: pickedDate!,
                   ),
-                  bgColor: MyColors.secondaryColor,
-                  txtColor: MyColors.lightColor,
+                  bgColor: MyColors.primaryDarkColor,
+                  txtColor: MyColors.lightElv3,
                 );
               }
             }, listener: (context, state) {
@@ -129,8 +129,8 @@ class _AddCountdownScreenState extends State<AddCountdownScreen> {
                 SnackBar snackBar = SnackBar(content: Text(state.errorMsg));
                 ScaffoldMessenger.of(context).showSnackBar(snackBar);
               } else if (state is SetCountdownSucceed) {
-                SnackBar snackBar =
-                    SnackBar(content: Text("COUNTDOWN ADDED SUCCESSFULLY!"));
+                SnackBar snackBar = const SnackBar(
+                    content: Text("COUNTDOWN ADDED SUCCESSFULLY!"));
                 ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 BlocProvider.of<CountdownTabCubit>(context).loadCountdowns();
                 Navigator.pop(context);

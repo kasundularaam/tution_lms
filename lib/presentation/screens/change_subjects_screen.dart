@@ -51,7 +51,7 @@ class _ChangeSubjectScreenState extends State<ChangeSubjectScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyColors.lightColor,
+      backgroundColor: MyColors.lightElv3,
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -106,7 +106,7 @@ class _ChangeSubjectScreenState extends State<ChangeSubjectScreen> {
                       if (state is ChangeSubjectsLoading) {
                         return const Center(
                           child: CircularProgressIndicator(
-                            color: MyColors.progressColor,
+                            color: MyColors.primaryColor,
                           ),
                         );
                       } else {
@@ -177,7 +177,7 @@ class OkButton extends StatelessWidget {
       onTap: () => onPressed(),
       child: Icon(
         Icons.check,
-        color: MyColors.primaryColor,
+        color: MyColors.primaryDarkColor,
         size: 20.sp,
       ),
     );

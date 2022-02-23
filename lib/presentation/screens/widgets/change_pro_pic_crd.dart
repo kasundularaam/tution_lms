@@ -35,7 +35,7 @@ class ChangeProPicCrd extends StatelessWidget {
                 state is ChangeProPicUploading) {
               return const Center(
                 child: CircularProgressIndicator(
-                  color: MyColors.secondaryColor,
+                  color: MyColors.primaryColor,
                 ),
               );
             } else if (state is ChangeProPicLoaded) {

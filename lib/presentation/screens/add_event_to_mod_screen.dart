@@ -40,19 +40,19 @@ class _AddEventToModScreenState extends State<AddEventToModScreen> {
         physics: const BouncingScrollPhysics(),
         children: [
           Text("Module",
-              style: TextStyle(color: MyColors.darkColor, fontSize: 16.sp)),
+              style: TextStyle(color: MyColors.darkElv0, fontSize: 16.sp)),
           SizedBox(
             height: 2.h,
           ),
           Container(
             padding: EdgeInsets.all(5.w),
             decoration: BoxDecoration(
-              color: MyColors.lightColor,
+              color: MyColors.lightElv3,
               borderRadius: BorderRadius.circular(2.w),
             ),
             child: Text(
               title,
-              style: TextStyle(color: MyColors.darkColor, fontSize: 14.sp),
+              style: TextStyle(color: MyColors.darkElv1, fontSize: 14.sp),
             ),
           ),
           SizedBox(
@@ -60,7 +60,7 @@ class _AddEventToModScreenState extends State<AddEventToModScreen> {
           ),
           Text(
             "Date",
-            style: TextStyle(color: MyColors.darkColor, fontSize: 16.sp),
+            style: TextStyle(color: MyColors.darkElv0, fontSize: 16.sp),
           ),
           SizedBox(
             height: 2.h,
@@ -69,15 +69,15 @@ class _AddEventToModScreenState extends State<AddEventToModScreen> {
             create: (context) => PickDateCubit(),
             child: MDatePicker(
               onSelectDate: (date) => pickedDate = date,
-              bgColor: MyColors.lightColor,
-              txtColor: MyColors.darkColor,
+              bgColor: MyColors.lightElv3,
+              txtColor: MyColors.darkElv1,
             ),
           ),
           SizedBox(
             height: 2.h,
           ),
           Text("Time",
-              style: TextStyle(color: MyColors.darkColor, fontSize: 16.sp)),
+              style: TextStyle(color: MyColors.darkElv0, fontSize: 16.sp)),
           SizedBox(
             height: 2.h,
           ),
@@ -85,22 +85,22 @@ class _AddEventToModScreenState extends State<AddEventToModScreen> {
             create: (context) => PickTimeCubit(),
             child: MTimePicker(
               onPickedTime: (time) => pickedTime = time,
-              bgColor: MyColors.lightColor,
-              txtColor: MyColors.darkColor,
+              bgColor: MyColors.lightElv3,
+              txtColor: MyColors.darkElv1,
             ),
           ),
           SizedBox(
             height: 2.h,
           ),
           Text("Repeat",
-              style: TextStyle(color: MyColors.darkColor, fontSize: 16.sp)),
+              style: TextStyle(color: MyColors.darkElv0, fontSize: 16.sp)),
           SizedBox(
             height: 2.h,
           ),
           Container(
             padding: EdgeInsets.all(5.w),
             decoration: BoxDecoration(
-              color: MyColors.lightColor,
+              color: MyColors.lightElv3,
               borderRadius: BorderRadius.circular(2.w),
             ),
             child: Column(
@@ -112,7 +112,7 @@ class _AddEventToModScreenState extends State<AddEventToModScreen> {
                     Text(
                       "Remind Me Weekly",
                       style:
-                          TextStyle(color: MyColors.darkColor, fontSize: 14.sp),
+                          TextStyle(color: MyColors.darkElv1, fontSize: 14.sp),
                     ),
                     Switch(
                         activeColor: MyColors.primaryColor,
@@ -142,7 +142,7 @@ class _AddEventToModScreenState extends State<AddEventToModScreen> {
                               Text(
                                 "For $weekCount Weeks",
                                 style: TextStyle(
-                                    color: MyColors.darkColor, fontSize: 14.sp),
+                                    color: MyColors.darkElv1, fontSize: 14.sp),
                               ),
                               Row(
                                 children: [
@@ -157,17 +157,20 @@ class _AddEventToModScreenState extends State<AddEventToModScreen> {
                                     },
                                     child: Container(
                                         padding: EdgeInsets.all(2.w),
-                                        decoration: BoxDecoration(
-                                            color: MyColors.progressColor,
+                                        decoration: const BoxDecoration(
+                                            color: MyColors.darkElv1,
                                             shape: BoxShape.circle),
-                                        child: Icon(Icons.remove)),
+                                        child: const Icon(
+                                          Icons.remove,
+                                          color: MyColors.lightElv3,
+                                        )),
                                   ),
                                   Container(
                                       margin:
                                           EdgeInsets.symmetric(horizontal: 1.w),
                                       padding: EdgeInsets.all(5.w),
-                                      decoration: BoxDecoration(
-                                          color: MyColors.primaryColor,
+                                      decoration: const BoxDecoration(
+                                          color: MyColors.primaryDarkColor,
                                           shape: BoxShape.circle),
                                       child: Text(
                                         "$weekCount",
@@ -184,10 +187,13 @@ class _AddEventToModScreenState extends State<AddEventToModScreen> {
                                     },
                                     child: Container(
                                         padding: EdgeInsets.all(2.w),
-                                        decoration: BoxDecoration(
-                                            color: MyColors.progressColor,
+                                        decoration: const BoxDecoration(
+                                            color: MyColors.darkElv1,
                                             shape: BoxShape.circle),
-                                        child: Icon(Icons.add)),
+                                        child: const Icon(
+                                          Icons.add,
+                                          color: MyColors.lightElv3,
+                                        )),
                                   ),
                                 ],
                               )
@@ -195,7 +201,7 @@ class _AddEventToModScreenState extends State<AddEventToModScreen> {
                           ),
                         ],
                       )
-                    : SizedBox(),
+                    : const SizedBox(),
               ],
             ),
           ),
@@ -236,7 +242,7 @@ class _AddEventToModScreenState extends State<AddEventToModScreen> {
                           print("date or time not picked");
                         }
                       },
-                      bgColor: MyColors.secondaryColor,
+                      bgColor: MyColors.primaryDarkColor,
                       txtColor: MyColors.lightColor),
                 );
               }

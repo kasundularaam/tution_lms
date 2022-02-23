@@ -43,7 +43,7 @@ class AttemptQuizPage extends StatelessWidget {
                       "Reset Progress",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: MyColors.darkColor,
+                        color: MyColors.darkElv0,
                         fontSize: 16.sp,
                       ),
                     ),
@@ -63,7 +63,7 @@ class AttemptQuizPage extends StatelessWidget {
                           horizontal: 5.w, vertical: 1.2.h),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(3.h),
-                          color: MyColors.primaryColor.withOpacity(0.1)),
+                          color: MyColors.primaryDarkColor.withOpacity(0.1)),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -78,7 +78,7 @@ class AttemptQuizPage extends StatelessWidget {
                             "Reset",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: MyColors.darkColor,
+                              color: MyColors.darkElv1,
                               fontSize: 16.sp,
                               fontWeight: FontWeight.w500,
                             ),
@@ -116,7 +116,7 @@ class AttemptQuizPage extends StatelessWidget {
           if (state is QuizScreenLoading) {
             return const Center(
                 child: CircularProgressIndicator(
-              color: MyColors.secondaryColor,
+              color: MyColors.primaryColor,
             ));
           } else if (state is QuizScreenLoaded) {
             return Column(
@@ -175,7 +175,7 @@ class AttemptQuizPage extends StatelessWidget {
                       child: Text(
                         "Check",
                         style: TextStyle(
-                            color: MyColors.primaryColor,
+                            color: MyColors.primaryDarkColor,
                             fontSize: 18.sp,
                             fontWeight: FontWeight.w600),
                       ),
@@ -185,7 +185,9 @@ class AttemptQuizPage extends StatelessWidget {
               ],
             );
           } else {
-            return const SizedBox();
+            return Container(
+              color: MyColors.lightElv2,
+            );
           }
         },
       ),

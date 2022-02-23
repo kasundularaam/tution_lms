@@ -45,7 +45,7 @@ class _QuizCardState extends State<QuizCard> {
           width: 100.w,
           padding: EdgeInsets.all(5.w),
           decoration: BoxDecoration(
-            color: MyColors.lightColor,
+            color: MyColors.lightElv3,
             borderRadius: BorderRadius.circular(5.w),
           ),
           child: Column(
@@ -55,8 +55,7 @@ class _QuizCardState extends State<QuizCard> {
               Text(
                 "${widget.index.toString().padLeft(2, "0")}. "
                 "${widget.question.question}",
-                style:
-                    TextStyle(color: MyColors.textColorDark, fontSize: 16.sp),
+                style: TextStyle(color: MyColors.darkElv1, fontSize: 16.sp),
               ),
               SizedBox(
                 height: 3.h,
@@ -110,7 +109,7 @@ class _QuizCardState extends State<QuizCard> {
               ),
             );
           },
-          txtColor: MyColors.lightColor,
+          txtColor: MyColors.lightElv3,
           bgColor: MyColors.primaryColor));
     });
     return answBtnList;
@@ -124,8 +123,8 @@ class _QuizCardState extends State<QuizCard> {
           AnswerBtn(
             answer: answer,
             onPressed: () {},
-            txtColor: MyColors.lightColor,
-            bgColor: MyColors.secondaryColor,
+            txtColor: MyColors.lightElv3,
+            bgColor: MyColors.primaryDarkColor,
           ),
         );
       } else {
@@ -146,7 +145,7 @@ class _QuizCardState extends State<QuizCard> {
                 ),
               );
             },
-            txtColor: MyColors.lightColor,
+            txtColor: MyColors.lightElv3,
             bgColor: MyColors.primaryColor,
           ),
         );

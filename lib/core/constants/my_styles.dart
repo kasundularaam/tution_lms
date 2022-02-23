@@ -12,12 +12,12 @@ class MyStyles {
 
   static TextStyle screenTitles = TextStyle(
     fontSize: 20.sp,
-    color: MyColors.primaryColor,
+    color: MyColors.lightElv3,
     fontWeight: FontWeight.bold,
   );
 
   static TextStyle screenSubtitles = TextStyle(
     fontSize: 18.sp,
-    color: MyColors.darkElv1,
+    color: MyColors.lightElv3,
   );
 }

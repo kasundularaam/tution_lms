@@ -67,7 +67,7 @@ class MyColors {
   static const Color titleClr = Color(0xff7F00FF);
 
   static const Color navBtnClr = lightElv3;
-  static const Color navBtnSelctdClr = secondaryColor;
+  static const Color navBtnSelctdClr = primaryDarkColor;
 
   static const Color eventCrdBgClr = Color(0xff9A70D1);
   static const Color homeBgClr = Color(0xff9A70D1);
