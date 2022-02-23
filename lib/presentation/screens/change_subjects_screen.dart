@@ -130,14 +130,14 @@ class _ChangeSubjectScreenState extends State<ChangeSubjectScreen> {
             Container(
               height: 0.7,
               width: 100.w,
-              color: MyColors.darkColor,
+              color: MyColors.darkElv1,
             ),
             Expanded(
               child: Container(
                 padding: EdgeInsets.only(top: 4.h, bottom: 2.h),
-                color: MyColors.darkColor.withOpacity(0.07),
+                color: MyColors.lightElv2,
                 child: ListView.builder(
-                  physics: BouncingScrollPhysics(),
+                  physics: const BouncingScrollPhysics(),
                   padding: EdgeInsets.symmetric(horizontal: 5.w),
                   shrinkWrap: true,
                   itemCount: subjects.length,

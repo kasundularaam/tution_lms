@@ -32,7 +32,7 @@ class _AuthScreenState extends State<AuthScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyColors.white,
+      backgroundColor: MyColors.lightElv3,
       body: SafeArea(
         child: BlocBuilder<AuthscreenNavCubit, AuthscreenNavState>(
           builder: (context, state) {

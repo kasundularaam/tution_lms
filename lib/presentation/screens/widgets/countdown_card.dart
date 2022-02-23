@@ -27,7 +27,7 @@ class CountdownCard extends StatelessWidget {
             width: 100.w,
             padding: EdgeInsets.symmetric(horizontal: 2.5.w, vertical: 5.w),
             decoration: BoxDecoration(
-                color: MyColors.lightColor,
+                color: MyColors.lightElv3,
                 borderRadius: BorderRadius.circular(5.w)),
             child: Column(
               children: [
@@ -54,7 +54,7 @@ class CountdownCard extends StatelessWidget {
                                     child: Text(
                                       state.daysStr,
                                       style: TextStyle(
-                                          color: MyColors.lightColor,
+                                          color: MyColors.lightElv3,
                                           fontSize: 30.sp,
                                           fontWeight: FontWeight.w600),
                                     ),
@@ -63,7 +63,7 @@ class CountdownCard extends StatelessWidget {
                                     child: Text(
                                       "Days",
                                       style: TextStyle(
-                                          color: MyColors.lightColor,
+                                          color: MyColors.lightElv3,
                                           fontSize: 10.sp,
                                           fontWeight: FontWeight.w600),
                                     ),
@@ -89,7 +89,7 @@ class CountdownCard extends StatelessWidget {
                                     child: Text(
                                       state.hoursStr,
                                       style: TextStyle(
-                                          color: MyColors.lightColor,
+                                          color: MyColors.lightElv3,
                                           fontSize: 30.sp,
                                           fontWeight: FontWeight.w600),
                                     ),
@@ -98,7 +98,7 @@ class CountdownCard extends StatelessWidget {
                                     child: Text(
                                       "Hours",
                                       style: TextStyle(
-                                          color: MyColors.lightColor,
+                                          color: MyColors.lightElv3,
                                           fontSize: 10.sp,
                                           fontWeight: FontWeight.w600),
                                     ),
@@ -124,7 +124,7 @@ class CountdownCard extends StatelessWidget {
                                     child: Text(
                                       state.minutesStr,
                                       style: TextStyle(
-                                          color: MyColors.lightColor,
+                                          color: MyColors.lightElv3,
                                           fontSize: 30.sp,
                                           fontWeight: FontWeight.w600),
                                     ),
@@ -133,7 +133,7 @@ class CountdownCard extends StatelessWidget {
                                     child: Text(
                                       "Minutes",
                                       style: TextStyle(
-                                          color: MyColors.lightColor,
+                                          color: MyColors.lightElv3,
                                           fontSize: 10.sp,
                                           fontWeight: FontWeight.w600),
                                     ),
@@ -159,7 +159,7 @@ class CountdownCard extends StatelessWidget {
                                     child: Text(
                                       state.secondsStr,
                                       style: TextStyle(
-                                          color: MyColors.lightColor,
+                                          color: MyColors.lightElv3,
                                           fontSize: 30.sp,
                                           fontWeight: FontWeight.w600),
                                     ),
@@ -168,7 +168,7 @@ class CountdownCard extends StatelessWidget {
                                     child: Text(
                                       "Seconds",
                                       style: TextStyle(
-                                          color: MyColors.lightColor,
+                                          color: MyColors.lightElv3,
                                           fontSize: 10.sp,
                                           fontWeight: FontWeight.w600),
                                     ),
@@ -180,13 +180,9 @@ class CountdownCard extends StatelessWidget {
                         ],
                       );
                     } else if (state is CountdownEnded) {
-                      return Container(
-                        child: Text("Ended"),
-                      );
+                      return const Text("Ended");
                     } else {
-                      return Container(
-                        child: Text("Loading..."),
-                      );
+                      return const Text("Loading...");
                     }
                   },
                 ),

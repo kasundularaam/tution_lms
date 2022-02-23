@@ -61,7 +61,7 @@ class _SelectSubjectPageState extends State<SelectSubjectPage> {
                   if (state is SelectedSubjectLoading) {
                     return const Center(
                       child: CircularProgressIndicator(
-                        color: MyColors.progressColor,
+                        color: MyColors.primaryColor,
                       ),
                     );
                   } else {
@@ -82,21 +82,21 @@ class _SelectSubjectPageState extends State<SelectSubjectPage> {
         Container(
           height: 0.1,
           width: 100.w,
-          color: MyColors.darkColor,
+          color: MyColors.darkElv1,
         ),
         BlocBuilder<SelectSubListCubit, SelectSubListState>(
             builder: (context, state) {
           if (state is SelectSubjectLoading) {
             return const Center(
               child: CircularProgressIndicator(
-                color: MyColors.progressColor,
+                color: MyColors.primaryColor,
               ),
             );
           } else if (state is SelectSubjectLoaded) {
             return Expanded(
               child: Container(
                 padding: EdgeInsets.only(top: 4.h, bottom: 2.h),
-                color: MyColors.darkColor.withOpacity(0.07),
+                color: MyColors.lightElv2,
                 child: ListView.builder(
                     physics: const BouncingScrollPhysics(),
                     padding: EdgeInsets.symmetric(horizontal: 5.w),
@@ -141,7 +141,7 @@ class OkButton extends StatelessWidget {
       onTap: () => onPressed(),
       child: Icon(
         Icons.check,
-        color: MyColors.primaryColor,
+        color: MyColors.primaryDarkColor,
         size: 20.sp,
       ),
     );

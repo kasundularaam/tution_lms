@@ -97,7 +97,7 @@ class AttemptQuizPage extends StatelessWidget {
           padding: EdgeInsets.all(5.w),
           child: Icon(
             Icons.more_vert_rounded,
-            color: MyColors.lightColor,
+            color: MyColors.lightElv3,
             size: 20.sp,
           ),
         ),
@@ -168,7 +168,7 @@ class AttemptQuizPage extends StatelessWidget {
                     }
                   },
                   child: Container(
-                    color: MyColors.lightColor,
+                    color: MyColors.lightElv3,
                     width: 100.w,
                     padding: EdgeInsets.symmetric(vertical: 2.h),
                     child: Center(

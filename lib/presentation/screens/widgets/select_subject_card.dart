@@ -56,7 +56,7 @@ class _SelectSubjectCardState extends State<SelectSubjectCard> {
               child: Text(
                 widget.subject.name,
                 style: TextStyle(
-                  color: selected ? MyColors.lightColor : MyColors.darkColor,
+                  color: selected ? MyColors.lightElv3 : MyColors.darkElv1,
                   fontSize: 16.sp,
                 ),
               ),

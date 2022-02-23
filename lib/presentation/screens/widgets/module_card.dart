@@ -45,7 +45,7 @@ class ModuleCard extends StatelessWidget {
                       border: Border(
                         right: BorderSide(width: 3.w, color: state.color),
                       ),
-                      color: MyColors.textColorLight,
+                      color: MyColors.lightElv3,
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,7 +53,7 @@ class ModuleCard extends StatelessWidget {
                         Text(
                           args.moduleName,
                           style: TextStyle(
-                            color: MyColors.textColorDark,
+                            color: MyColors.darkElv1,
                             fontSize: 16.sp,
                           ),
                         ),
@@ -66,14 +66,14 @@ class ModuleCard extends StatelessWidget {
                             Text(
                               "Contents: ${state.contentCount}",
                               style: TextStyle(
-                                color: MyColors.textColorDark,
+                                color: MyColors.darkElv1,
                                 fontSize: 14.sp,
                               ),
                             ),
                             Text(
                               "Quiz: ${state.quizCount}",
                               style: TextStyle(
-                                color: MyColors.textColorDark,
+                                color: MyColors.darkElv1,
                                 fontSize: 14.sp,
                               ),
                             ),
@@ -87,7 +87,7 @@ class ModuleCard extends StatelessWidget {
                     width: 100.w,
                     padding: EdgeInsets.all(5.w),
                     decoration: const BoxDecoration(
-                      color: MyColors.lightColor,
+                      color: MyColors.lightElv3,
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -95,7 +95,7 @@ class ModuleCard extends StatelessWidget {
                         Text(
                           args.moduleName,
                           style: TextStyle(
-                            color: MyColors.textColorDark,
+                            color: MyColors.darkElv1,
                             fontSize: 16.sp,
                           ),
                         ),

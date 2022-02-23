@@ -205,7 +205,7 @@ class _InitTabState extends State<InitTab> {
                     btnText: "End",
                     onPressed: () => BlocProvider.of<TimerCubit>(context)
                         .endTimer(contentScreenArgs: widget.args),
-                    bgColor: MyColors.lightColor,
+                    bgColor: MyColors.lightElv3,
                     txtColor: MyColors.red);
               }
             },

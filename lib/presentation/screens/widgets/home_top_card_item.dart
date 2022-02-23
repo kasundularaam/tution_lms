@@ -40,13 +40,12 @@ class HomeTopCardItem extends StatelessWidget {
                       subject.name,
                       overflow: TextOverflow.ellipsis,
                       style:
-                          TextStyle(color: MyColors.darkColor, fontSize: 14.sp),
+                          TextStyle(color: MyColors.darkElv1, fontSize: 14.sp),
                     ),
                   ),
                   Text(
                     "$percentage%",
-                    style:
-                        TextStyle(color: MyColors.darkColor, fontSize: 14.sp),
+                    style: TextStyle(color: MyColors.darkElv1, fontSize: 14.sp),
                   ),
                 ],
               ),
@@ -54,11 +53,12 @@ class HomeTopCardItem extends StatelessWidget {
                 height: 1.h,
               ),
               MyProgressBar(
-                  width: 75.w,
-                  max: state.contentCount,
-                  progress: state.fireContentCount,
-                  backgroundColor: MyColors.primaryColor.withOpacity(0.5),
-                  progressColor: MyColors.progressColor),
+                width: 75.w,
+                max: state.contentCount,
+                progress: state.fireContentCount,
+                backgroundColor: MyColors.primaryColor.withOpacity(0.5),
+                progressColor: MyColors.primaryDarkColor,
+              ),
             ],
           );
         } else {
@@ -75,13 +75,13 @@ class HomeTopCardItem extends StatelessWidget {
                       subject.name,
                       overflow: TextOverflow.ellipsis,
                       style:
-                          TextStyle(color: MyColors.darkColor, fontSize: 14.sp),
+                          TextStyle(color: MyColors.darkElv0, fontSize: 14.sp),
                     ),
                   ),
                   Text(
                     "...",
                     style: TextStyle(
-                        color: MyColors.darkColor,
+                        color: MyColors.darkElv1,
                         fontSize: 14.sp,
                         fontWeight: FontWeight.bold),
                   ),
@@ -95,7 +95,7 @@ class HomeTopCardItem extends StatelessWidget {
                 max: 100,
                 progress: 0,
                 backgroundColor: MyColors.primaryColor.withOpacity(0.5),
-                progressColor: MyColors.progressColor,
+                progressColor: MyColors.primaryDarkColor,
               ),
             ],
           );

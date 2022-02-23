@@ -120,7 +120,7 @@ class _ContentScreenState extends State<ContentScreen> {
                                   moduleId: widget.args.moduleId,
                                   contentId: widget.args.contentId),
                       bgColor: MyColors.primaryDarkColor,
-                      txtColor: MyColors.lightColor,
+                      txtColor: MyColors.lightElv3,
                     );
                   }
                 },
@@ -161,7 +161,7 @@ class _ContentScreenState extends State<ContentScreen> {
                             contentName: widget.args.contentName),
                       ),
                   bgColor: MyColors.primaryDarkColor,
-                  txtColor: MyColors.lightColor),
+                  txtColor: MyColors.lightElv3),
             ],
           ),
           SizedBox(

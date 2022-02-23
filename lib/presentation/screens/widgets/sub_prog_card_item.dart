@@ -44,13 +44,13 @@ class SubProgCardItem extends StatelessWidget {
                           subject.name,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
-                              color: MyColors.textColorDark, fontSize: 16.sp),
+                              color: MyColors.darkElv1, fontSize: 16.sp),
                         ),
                       ),
                       Text(
                         "$percentage%",
                         style: TextStyle(
-                            color: MyColors.textColorDark, fontSize: 16.sp),
+                            color: MyColors.darkElv1, fontSize: 16.sp),
                       ),
                     ],
                   ),
@@ -62,7 +62,7 @@ class SubProgCardItem extends StatelessWidget {
                     max: state.contentCount,
                     progress: state.fireContentCount,
                     backgroundColor: MyColors.primaryColor.withOpacity(0.5),
-                    progressColor: MyColors.progressColor,
+                    progressColor: MyColors.primaryDarkColor,
                   ),
                 ],
               );
@@ -77,13 +77,13 @@ class SubProgCardItem extends StatelessWidget {
                           subject.name,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
-                              color: MyColors.textColorDark, fontSize: 16.sp),
+                              color: MyColors.darkElv0, fontSize: 16.sp),
                         ),
                       ),
                       Text(
                         "...",
                         style: TextStyle(
-                            color: MyColors.textColorDark,
+                            color: MyColors.darkElv1,
                             fontSize: 16.sp,
                             fontWeight: FontWeight.bold),
                       ),
@@ -97,7 +97,7 @@ class SubProgCardItem extends StatelessWidget {
                     max: 100,
                     progress: 0,
                     backgroundColor: MyColors.primaryColor.withOpacity(0.5),
-                    progressColor: MyColors.progressColor,
+                    progressColor: MyColors.primaryDarkColor,
                   ),
                 ],
               );

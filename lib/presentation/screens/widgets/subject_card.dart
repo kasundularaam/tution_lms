@@ -48,7 +48,7 @@ class SubjectCard extends StatelessWidget {
                 Text(
                   subject.name,
                   style: TextStyle(
-                      color: MyColors.textColorDark,
+                      color: MyColors.darkElv0,
                       fontSize: 18.sp,
                       fontWeight: FontWeight.w600),
                 ),
@@ -66,7 +66,7 @@ class SubjectCard extends StatelessWidget {
                               Text(
                                 "Modules",
                                 style: TextStyle(
-                                  color: MyColors.textColorDark,
+                                  color: MyColors.darkElv0,
                                   fontSize: 16.sp,
                                 ),
                               ),
@@ -75,7 +75,7 @@ class SubjectCard extends StatelessWidget {
                                   Text(
                                     "${state.completedModules}/${state.moduleCount}",
                                     style: TextStyle(
-                                      color: MyColors.textColorDark,
+                                      color: MyColors.darkElv1,
                                       fontSize: 12.sp,
                                       fontWeight: FontWeight.w400,
                                     ),
@@ -87,8 +87,8 @@ class SubjectCard extends StatelessWidget {
                                     width: 35.w,
                                     max: state.moduleCount,
                                     progress: state.completedModules,
-                                    backgroundColor: MyColors.textColorLight,
-                                    progressColor: MyColors.progressColor,
+                                    backgroundColor: MyColors.lightElv3,
+                                    progressColor: MyColors.primaryDarkColor,
                                   ),
                                 ],
                               )
@@ -102,7 +102,7 @@ class SubjectCard extends StatelessWidget {
                             children: [
                               Text("Contents",
                                   style: TextStyle(
-                                    color: MyColors.textColorDark,
+                                    color: MyColors.darkElv0,
                                     fontSize: 16.sp,
                                   )),
                               Column(
@@ -110,7 +110,7 @@ class SubjectCard extends StatelessWidget {
                                   Text(
                                     "${state.completedContents}/${state.contentCount}",
                                     style: TextStyle(
-                                      color: MyColors.textColorDark,
+                                      color: MyColors.darkElv1,
                                       fontSize: 12.sp,
                                       fontWeight: FontWeight.w400,
                                     ),
@@ -122,8 +122,8 @@ class SubjectCard extends StatelessWidget {
                                     width: 35.w,
                                     max: state.contentCount,
                                     progress: state.completedContents,
-                                    backgroundColor: MyColors.textColorLight,
-                                    progressColor: MyColors.progressColor,
+                                    backgroundColor: MyColors.lightElv3,
+                                    progressColor: MyColors.primaryDarkColor,
                                   ),
                                 ],
                               )

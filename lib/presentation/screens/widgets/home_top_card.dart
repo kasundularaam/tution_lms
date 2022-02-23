@@ -38,9 +38,10 @@ class HomeTopCard extends StatelessWidget {
               Text(
                 "Subjects",
                 style: TextStyle(
-                    color: MyColors.textColorDark,
-                    fontSize: 18.sp,
-                    fontWeight: FontWeight.w600),
+                  color: MyColors.darkElv0,
+                  fontSize: 18.sp,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
               SizedBox(
                 height: 1.h,

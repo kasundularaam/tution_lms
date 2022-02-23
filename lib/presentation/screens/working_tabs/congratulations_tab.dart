@@ -63,7 +63,7 @@ class _CongratulationsTabState extends State<CongratulationsTab> {
                 padding:
                     EdgeInsets.symmetric(vertical: 1.5.h, horizontal: 10.w),
                 decoration: BoxDecoration(
-                  color: MyColors.lightColor,
+                  color: MyColors.lightElv3,
                   borderRadius: BorderRadius.circular(5.h),
                 ),
                 child: Row(

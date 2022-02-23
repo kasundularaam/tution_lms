@@ -118,8 +118,8 @@ class _SignUpPageState extends State<SignUpPage> {
                     name: _name,
                     password: _password,
                   ),
-                  bgColor: MyColors.primaryColor,
-                  txtColor: MyColors.lightColor,
+                  bgColor: MyColors.primaryDarkColor,
+                  txtColor: MyColors.lightElv3,
                 ),
               );
             }

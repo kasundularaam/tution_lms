@@ -47,8 +47,7 @@ class CheckQuizCard extends StatelessWidget {
               Text(
                 "${quizCheck.index.toString().padLeft(2, "0")}. "
                 "${quizCheck.question}",
-                style:
-                    TextStyle(color: MyColors.textColorDark, fontSize: 16.sp),
+                style: TextStyle(color: MyColors.darkElv1, fontSize: 16.sp),
               ),
               SizedBox(
                 height: 2.h,
@@ -74,7 +73,7 @@ class CheckQuizCard extends StatelessWidget {
               Text(
                 "Correct Answer: ${quizCheck.correctAnswer}",
                 style: TextStyle(
-                    color: MyColors.darkColor,
+                    color: MyColors.darkElv1,
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w600),
               ),

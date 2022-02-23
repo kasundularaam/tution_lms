@@ -35,7 +35,7 @@ class FirebaseSubjectRepo {
           .get();
       snapshot.docs.map((doc) {
         Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
-        subjectList.add(Subject(id: data["id"], name: data["name"]));
+        subjectList.add(Subject.fromMap(data));
       }).toList();
       return subjectList;
     } catch (e) {
@@ -52,7 +52,7 @@ class FirebaseSubjectRepo {
           .doc(subjectId)
           .get();
       Map<String, dynamic>? data = snapshot.data() as Map<String, dynamic>;
-      return Subject(id: data['id'], name: data['name']);
+      return Subject.fromMap(data);
     } catch (e) {
       throw e;
     }

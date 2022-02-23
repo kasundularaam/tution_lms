@@ -27,14 +27,14 @@ class ContentCard extends StatelessWidget {
           child: Container(
             padding: EdgeInsets.symmetric(vertical: 2.h),
             decoration: BoxDecoration(
-              color: MyColors.white,
+              color: MyColors.lightElv3,
               borderRadius: BorderRadius.circular(2.w),
             ),
             child: Center(
               child: Text(
                 args.contentName,
                 style: TextStyle(
-                  color: MyColors.textColorDark,
+                  color: MyColors.darkElv1,
                   fontSize: 16.sp,
                 ),
               ),

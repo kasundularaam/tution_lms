@@ -97,7 +97,7 @@ class _CountDownTabState extends State<CountDownTab> {
                                     children: [
                                       const Icon(
                                         Icons.edit_rounded,
-                                        color: MyColors.secondaryColor,
+                                        color: MyColors.orange,
                                       ),
                                       SizedBox(
                                         width: 2.w,
@@ -106,7 +106,7 @@ class _CountDownTabState extends State<CountDownTab> {
                                         "Edit",
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
-                                          color: MyColors.darkColor,
+                                          color: MyColors.darkElv1,
                                           fontSize: 16.sp,
                                           fontWeight: FontWeight.w500,
                                         ),
@@ -149,7 +149,7 @@ class _CountDownTabState extends State<CountDownTab> {
                                         "Delete",
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
-                                          color: MyColors.darkColor,
+                                          color: MyColors.darkElv1,
                                           fontSize: 16.sp,
                                           fontWeight: FontWeight.w500,
                                         ),

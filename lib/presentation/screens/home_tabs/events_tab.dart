@@ -116,7 +116,7 @@ class _EventsTabState extends State<EventsTab> {
                                               "Delete",
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
-                                                color: MyColors.darkColor,
+                                                color: MyColors.darkElv1,
                                                 fontSize: 16.sp,
                                                 fontWeight: FontWeight.w500,
                                               ),

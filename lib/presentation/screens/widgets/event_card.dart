@@ -42,8 +42,8 @@ class EventCard extends StatelessWidget {
                       shape: BoxShape.circle, color: MyColors.primaryColor),
                   child: Text(
                     day,
-                    style: TextStyle(
-                        color: MyColors.textColorLight, fontSize: 20.sp),
+                    style:
+                        TextStyle(color: MyColors.lightElv3, fontSize: 20.sp),
                   ),
                 ),
               ),
@@ -69,12 +69,12 @@ class EventCard extends StatelessWidget {
                           padding: EdgeInsets.all(2.w),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(1.w),
-                            color: MyColors.white,
+                            color: MyColors.lightElv3,
                           ),
                           child: Text(
                             calEvent.title,
                             style: TextStyle(
-                                color: MyColors.textColorDark, fontSize: 14.sp),
+                                color: MyColors.darkElv1, fontSize: 14.sp),
                           ),
                         ),
                         SizedBox(
@@ -83,7 +83,7 @@ class EventCard extends StatelessWidget {
                         Text(
                           "$monYear at $formattedTime",
                           style: TextStyle(
-                              color: MyColors.textColorLight, fontSize: 12.sp),
+                              color: MyColors.lightElv3, fontSize: 12.sp),
                         ),
                       ],
                     ),

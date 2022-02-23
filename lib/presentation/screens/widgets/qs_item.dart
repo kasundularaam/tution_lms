@@ -22,7 +22,7 @@ class QsItem extends StatelessWidget {
         Text(
           subject.name,
           style: TextStyle(
-            color: MyColors.textColorDark,
+            color: MyColors.darkElv1,
             fontSize: 16.sp,
           ),
         ),
@@ -46,7 +46,7 @@ class QsItem extends StatelessWidget {
                           EdgeInsets.symmetric(horizontal: 4.w, vertical: 2.w),
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: MyColors.lightColor,
+                          color: MyColors.lightElv3,
                           width: 0.5.w,
                         ),
                         borderRadius: BorderRadius.circular(2.w),
@@ -54,7 +54,7 @@ class QsItem extends StatelessWidget {
                       child: Text(
                         "All: ${state.all} | Done: ${state.done} | correct: ${state.correct}",
                         style: TextStyle(
-                            color: MyColors.lightColor,
+                            color: MyColors.lightElv3,
                             fontSize: 10.sp,
                             fontWeight: FontWeight.bold),
                       ),
@@ -67,13 +67,13 @@ class QsItem extends StatelessWidget {
                       decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           border: Border.all(
-                            color: MyColors.lightColor,
+                            color: MyColors.lightElv3,
                             width: 0.5.w,
                           )),
                       child: Text(
                         "${state.precentage}%",
                         style: TextStyle(
-                            color: MyColors.lightColor,
+                            color: MyColors.lightElv3,
                             fontSize: 10.sp,
                             fontWeight: FontWeight.bold),
                       ),

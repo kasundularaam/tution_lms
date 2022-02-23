@@ -175,7 +175,7 @@ class _AddEventToModScreenState extends State<AddEventToModScreen> {
                                       child: Text(
                                         "$weekCount",
                                         style: TextStyle(
-                                            color: MyColors.lightColor,
+                                            color: MyColors.lightElv3,
                                             fontSize: 14.sp),
                                       )),
                                   GestureDetector(
@@ -243,7 +243,7 @@ class _AddEventToModScreenState extends State<AddEventToModScreen> {
                         }
                       },
                       bgColor: MyColors.primaryDarkColor,
-                      txtColor: MyColors.lightColor),
+                      txtColor: MyColors.lightElv3),
                 );
               }
             },

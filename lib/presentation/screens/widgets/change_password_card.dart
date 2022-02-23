@@ -42,8 +42,7 @@ class _ChangePasswordCardState extends State<ChangePasswordCard> {
     return Container(
       padding: EdgeInsets.all(5.w),
       decoration: BoxDecoration(
-          color: MyColors.textColorLight,
-          borderRadius: BorderRadius.circular(2.w)),
+          color: MyColors.lightElv3, borderRadius: BorderRadius.circular(2.w)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
